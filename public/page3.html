@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        MINI HACKATON ISP
+    </title>
+    <link rel="stylesheet" href="UI-Menu-master/menu.css">
+    <link rel="stylesheet" href="UI-Header-master/header.css">
+    <link rel="stylesheet" href="UI-Icon-master/icon.css">
+    <link rel="stylesheet" href="UI-Item-master/item.css">
+    <link rel="stylesheet" href="UI-Container-master/container.css">
+    <link rel="stylesheet" href="UI-Segment-master/segment.css">
+    <link rel="stylesheet" href="UI-Image-master/image.css">
+
+</head>
+
+<body>
+    <h2 class="ui icon header">
+    <i class="users icon"></i>
+    <div class="content">
+      MINI HACKATON
+      <div class="sub header">ISP Class HACKATON Events 2017</div>
+    </div>
+    </h2>
+    <div class="ui menu">
+        <div class="header item">
+            HACKATON
+        </div>
+        <a class="item" href="page1.html">
+            DOM Solution
+        </a>
+        <a class="item" href="page2.html">
+            ACTIVITY 1 SOLUTION
+        </a>
+        <a class="item active" href="page3.html">
+            ACTIVITY 2 SOLUTION
+        </a>
+    </div>
+    <div class="ui raised very padded text container segment">
+        <h2 class="ui header">ACTIVITY 2 SOLUTION</h2>
+        <h3>1. Modify the code so that the game does not start until you click the restart button. Describe
+
+the modifications you make and show the part of the code you modify.</h3> Remove myGameArea.start() in startGame() and wait until restart button got press then set myGameArea.start().
+<img class="ui fluid image" src="images/Ac21.1.png">
+<img class="ui fluid image" src="images/Ac21.2.png">
+
+        <h3>2. Modify the code so that the obstacles’ color is yellow instead of green and the game piece is
+
+blue instead of red. Describe the modifications you make and show the part of the code you
+
+modify.
+</h3> In the file game.html first in the function updateGameArea() in the line 129 and 130 change the third parameter to yellow.
+        <br> myObstacles.push(new component(10, height, "yellow", x, 0));
+        <br> myObstacles.push(new component(10, x - height - gap, "yellow", x, height + gap));
+        <br> Second, in the function startGame() when we create the myGamePiece in line 39 change the third parameter to blue.
+        <img class="ui fluid image" src="images/Ac22.1.png">
+        <img class="ui fluid image" src="images/Ac22.2.png">
+        <img class="ui fluid image" src="images/Ac22.3.png">
+
+        <h3>3. Add the “PAUSE” button so that when you click on it the game freezes. If you click on it
+
+again, the game resumes. Describe the modifications you make and show the part of the
+
+code you modify.</h3> Create the button pause that will `PAUSE` when you click it the pause in `myGameArea` will swap to opposite value.<br>
+        <button id="pause" onclick="myGameArea.pause = !myGameArea.pause">PAUSE</button>
+        <img class="ui fluid image" src="images/Ac23.1.png">
+        <img class="ui fluid image" src="images/Ac23.2.png">
+        <img class="ui fluid image" src="images/Ac23.3.png">
+
+        <h3>4. Modify the code so that you are allowed three chances before the game freezes and needs
+
+to be restarted. Once the game piece crashes with the obstacle and this is not crash number
+
+three, the game restarts automatically and the score continues with what it was at the crash
+
+event. Describe the modifications you make and show the part of the code you modify.</h3> Create a new attribute (life) and and in updateGameArea that if myGamePiece crash with obstacle then + the attribute by 1 and if life is >= 3 then stop else remove the obstacle.
+<img class="ui fluid image" src="images/Ac24.1.png">
+<img class="ui fluid image" src="images/Ac24.2.png">
+
+
+    </div>
+</body>
+
+</html>
