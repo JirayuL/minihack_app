@@ -1,5 +1,7 @@
 # minihack_app
 
+Link : https://peaceful-fortress-19869.herokuapp.com/page1.html
+
 ## Member
 
 1. Jirayu Laungwilawan    5910546635
@@ -82,7 +84,7 @@ Spring...
 <img>
 <script>
 <script>
-```
+```cd
 ### Q.2
 
 Each box has a dimension of `120px * 120px` and has a border `0px` but has a `10px` `margin` at the bottom of each images. The font size of each name is `16px`. All of these boxes has an `event listener`. Its box sizing is a border box so border is created automatically for all the boxes. But for the whole section of "Instructors Teaching Assistants" there is a `margin` on both the left and right side of `15px` each. The Instructors and the Teaching Assistants both have a `padding` on the left and right of `15px`.
